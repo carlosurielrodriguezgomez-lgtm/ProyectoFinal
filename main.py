@@ -14,7 +14,7 @@ def limpiar_pantalla():
 
 def mostrar_encabezado():
     print("\n╔══════════════════════════════════════════╗")
-    print("║               GAMEVAULT                  ║")
+    print("║       GAMEVAULT - Consola Interactiva    ║")
     print("║       Gestor de Colección Gamer          ║")
     print("╚══════════════════════════════════════════╝")
 
