@@ -4,6 +4,6 @@ def get_connection():
     return mysql.connector.connect(
         host="localhost",
         user="root",
-        password="", # Ajustar credenciales
+        password="087117",
         database="gamevault"
     )
