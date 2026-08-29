@@ -26,7 +26,7 @@ def mostrar_menu():
     return input("\nSelecciona una opción: ")
 
 def main():
-    # Instanciamos el servicio principal una sola vez
+    
     service = VideojuegoService()
     
     while True:
@@ -42,7 +42,7 @@ def main():
                 plataforma = input("Plataforma (PC, Xbox, PS5...): ")
                 anio = int(input("Año de lanzamiento: "))
                 
-                # Pasamos los datos limpios a la capa de servicios
+                #
                 vj = service.registrar_videojuego(nombre, saga_id, plataforma, anio)
                 print(f"\n✓ ÉXITO: '{vj.nombre}' registrado correctamente con ID: {vj.id}")
                 
@@ -81,7 +81,7 @@ def main():
                 horas = float(input("Total de horas jugadas: "))
                 porcentaje = float(input("Porcentaje completado (0 - 100): "))
                 
-                # Convertimos 'S' o 'N' en un booleano para el servicio
+               
                 es_completado = input("¿Juego terminado? (S/N): ").strip().upper() == 'S'
                 
                 service.actualizar_progreso(id_vj, horas, porcentaje, es_completado)
@@ -90,7 +90,7 @@ def main():
             except ValueError:
                 print("\n✗ ERROR: Debes ingresar valores numéricos válidos para ID, horas y porcentaje.")
             except (VideojuegoNoEncontradoError, ReglaNegocioError) as e:
-                # Aquí brillan nuestras excepciones personalizadas
+                
                 print(f"\n✗ ERROR DE REGLA: {e}")
             except GameVaultError as e:
                 print(f"\n✗ ERROR DE NEGOCIO: {e}")

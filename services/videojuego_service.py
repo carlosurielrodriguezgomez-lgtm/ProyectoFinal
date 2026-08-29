@@ -36,9 +36,8 @@ class VideojuegoService:
         if completado and porcentaje != 100.0:
             raise ReglaNegocioError("Un juego completado debe tener el 100% de progreso.")
 
-        # Aquí validaríamos contra el repositorio de Progreso para asegurar que las horas no bajen
-        # (Se asume la existencia de progreso_repository.obtener_ultimo_progreso(id_vj))
+      
         
-        # Guardar auditoría
+        
         auditar_operacion("actualizar_progreso", f"Juego {vj.nombre} actualizado a {porcentaje}%")
-        # Logica de guardado omitida por brevedad...
+       
